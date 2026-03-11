@@ -23,5 +23,24 @@ Most Linux distributions should already come with an up to date Python interpret
 
 5. You will get a prompt of tutorial instructions which can be useful if you are new here. Or you can skip the tutorial instructions.
 
+Welcome page of the MakeCode Arcade Game:
 ![Alt text for the image](img/screenshot3.png)
 
+The Game Window of the MakeCode Arcade Game:
+![Alt text for the image](img/screenshot4.png)
+
+The Toolbox  structure workspace of the game:
+![Alt text for the image](img/screenshot5.png)
+
+This section is the workspace of the makecode arcade
+![Alt text for the image](img/screenshot6.png)
+
+In this image you can share to your self with link or to the others
+![Alt text for the image](img/screenshot7.png)
+
+In this image you can download the your project.
+![Alt text for the image](img/screenshot8.png)
+
+In the image you are done the workspace and you can start the game workspace.
+
+![Alt text for the image](img/screenshot9.png)
