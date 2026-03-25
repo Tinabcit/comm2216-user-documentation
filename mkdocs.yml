@@ -14,4 +14,8 @@ nav:
   - Glossary: glossary.md
   - Optional Enemy: enemy-higher-level.md
 
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
   
