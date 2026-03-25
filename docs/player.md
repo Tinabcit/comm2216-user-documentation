@@ -33,7 +33,7 @@ Sprites are what MakeCode Arcade uses to refer to entities, or characters in the
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     `, SpriteKind.Player)
- ```
+```
 
 !!! Info
     If you put in code incorrectly, you can delete it by **highlighting** with your mouse and hitting backspace. Or, you can hit ctrl+z to undo your last move, as well as shift+ctrl+z to redo your last move.
