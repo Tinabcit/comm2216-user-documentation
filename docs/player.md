@@ -62,7 +62,7 @@ Sprites are what MakeCode Arcade uses to refer to entities, or characters in the
     `, SpriteKind.Player)
 ```
 
-!!! Info
+!!! info
     The reason this code uses numbers and letters to show what the sprite looks like is because we can't put an image directly into our code. So the editor uses specific numbers and letters to signify each colour, so every letter and number is really a coloured pixel in your sprite!
 
 
