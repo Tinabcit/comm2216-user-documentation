@@ -38,9 +38,8 @@ Sprites are what MakeCode Arcade uses to refer to entities, or characters in the
 !!! info
     If you put in code incorrectly, you can delete it by **highlighting** with your mouse and hitting backspace. Or, you can hit ctrl+z to undo your last move, as well as shift+ctrl+z to redo your last move.
 
-
 4. Right now, your player sprite is blank. To fix that, you can edit the dots to be other characters, which will reflect in the sprite. For the purpose of this documentation, **copy** and **paste** the code below in place of your empty sprite code, so that this new sprite is the only thing in your editor. This should turn your sprite into an apple. Optionally, you can create your own sprite by clicking the small floating palette that appears next to the code.
-   
+
 ```javascript
     let mySprite = sprites.create(img`
     . . . . . . . e c 7 . . . . . . 
@@ -65,14 +64,14 @@ Sprites are what MakeCode Arcade uses to refer to entities, or characters in the
 !!! info
     The reason this code uses numbers and letters to show what the sprite looks like is because we can't put an image directly into our code. So the editor uses specific numbers and letters to signify each colour, so every letter and number is really a coloured pixel in your sprite!
 
-
-5. You'll now see an apple in the game window on the left of the screen. It doesn't move right now, but don't worry! It's not broken. Movement will be covered in a future section.
+1. You'll now see an apple in the game window on the left of the screen. It doesn't move right now, but don't worry! It's not broken. Movement will be covered in a future section.
 
 ## Setting up a camera
 
 Now that we have our player sprite, you'll want to set up controls. Before that, though, you'll want a camera that follows your sprite around. If we don't have a camera, the sprite will be able to move off screen entirely.
 
 1. Navigate to the 'scene' section of the code blocks, then find the 'camera' subsection. **Select** the block that says 'camera follow sprite mysprite.'
+
 ![Alt text for the image](img/player_4.png)
 2. Similar to the last section, **click** and **drag** this block out of the menu into your code field. The code that appears should look like this.
 

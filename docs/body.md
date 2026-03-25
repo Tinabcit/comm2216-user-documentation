@@ -15,8 +15,6 @@ The easiest way to start is by using the browser version.
 3. Wait for the editor to load.
 4. Once the page opens, you can begin creating your game right away without installing anything.
 
-
-
 ## Opening the Editor
 
 After installing or opening the browser version:

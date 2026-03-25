@@ -78,9 +78,12 @@ let yellowDuck = sprites.create(img`
     . . . . . . c c c c c a a . . .
 `, SpriteKind.Player)
 ```
+
 ## Step 3: Creating the Enemy Sprite
+
 After creating the player, we create the enemy sprite.
 The enemy will chase the player during gameplay.
+
 ``` javascript
 let enemy = sprites.create(img`
     . . . . . . . . . . . . . . . .
@@ -98,20 +101,27 @@ let enemy = sprites.create(img`
     . . 2 2 . . . . . . . . 2 2 . .
 `, SpriteKind.Enemy)
 ```
+
 - The type SpriteKind.Enemy tells the game that this sprite represents an enemy character.
 
 ## Step 4: Enabling Player Movement
+
 - Next, we allow the player to move around the game map.
+  
 ``` javascript
 controller.moveSprite(yellowDuck, 100, 100)
 ```
+
 This command allows the player to move in all directions using the arrow keys.
 
 ## Step 5: Making the Camera Follow the Player
+
 - To keep the player centered on the screen while moving through the level, the camera follows the player sprite.
+  
 ``` javascript
 scene.cameraFollowSprite(yellowDuck)
 ```
+
 This ensures the player stays centered on the screen.
 
 ## Step 6: Adding Game Information
