@@ -37,6 +37,7 @@ Sprites are what MakeCode Arcade uses to refer to entities, or characters in the
 
 !!! Info
     If you put in code incorrectly, you can delete it by **highlighting** with your mouse and hitting backspace. Or, you can hit ctrl+z to undo your last move, as well as shift+ctrl+z to redo your last move.
+!!!
 4. Right now, your player sprite is blank. To fix that, you can edit the dots to be other characters, which will reflect in the sprite. For the purpose of this documentation, **copy** and **paste** the code below in place of your empty sprite code, so that this new sprite is the only thing in your editor. This should turn your sprite into an apple. Optionally, you can create your own sprite by clicking the small floating palette that appears next to the code.
 ```javascript
     let mySprite = sprites.create(img`
