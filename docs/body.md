@@ -1,16 +1,50 @@
 # Project Structure / Installation
 
-## Using MakeCode Arcade 
+## Using MakeCode Arcade
 
-In order to user to create 2D or 3D games in MakeCode Arcade, you will first have to go install or use the browser version of Makecode Arcade.
+To create 2D or simple game projects in MakeCode Arcade, you can either use the browser version or install the app on your computer.
 
-The screenshot in this document will show the installers for Windows. The UI will be slightly different on other operating systems, but the overall process will be the same.
+This guide explains how to get started with MakeCode Arcade on Windows. The layout may look a little different on other operating systems, but the overall steps are similar.
 
-Installing or Using MakeCode Arcade in Windows:
+## Option 1: Use MakeCode Arcade in Your Browser
 
-Most Linux distributions should already come with an up to date Python interpreter, but Windows doesn't have one by default and Mac come packaged an outdated version.
+The easiest way to start is by using the browser version.
 
-1. Go to the official MakeCode Arcade [Link Text](https://arcade.makecode.com/#) on the computer you want to install MakeCode Arcade to.
-2. The website should automatically detect your operating system and change the main download button to the correct version of the installer. If the auto detection is not correct, click on of the options below to manually select the version. You can follow the tutorial [Link Text](https://arcade.makecode.com/#editor)
+1. Open your web browser.
+2. Go to the official MakeCode Arcade website: [MakeCode Arcade](https://arcade.makecode.com/)
+3. Wait for the editor to load.
+4. Once the page opens, you can begin creating your game right away without installing anything.
 
-![Alt text for the image](img/screenshot3.png)
+## Option 2: Install MakeCode Arcade on Windows
+
+If you prefer to use the desktop app, you can install MakeCode Arcade on your computer.
+
+1. Open your web browser.
+2. Go to the official MakeCode Arcade website: [MakeCode Arcade](https://arcade.makecode.com/)
+3. Look for the **Download** option on the website.
+4. The site may automatically detect your operating system and show the correct installer.
+5. If needed, choose the Windows version manually.
+6. Download the installer.
+7. Open the downloaded file.
+8. Follow the installation steps shown on your screen.
+9. Once the installation is complete, open MakeCode Arcade from your computer.
+
+## Opening the Editor
+
+After installing or opening the browser version:
+
+1. Launch MakeCode Arcade.
+2. Select **New Project**.
+3. Enter a name for your project.
+4. Start building your game using blocks or JavaScript.
+
+## Notes
+
+- MakeCode Arcade works directly in the browser, so installation is optional.
+- The browser version is useful if you want quick access without downloading anything.
+- The desktop version may be more convenient if you want the app saved on your computer.
+- The interface may vary slightly depending on your operating system.
+
+## Official Tutorial
+
+You can also follow the official editor and tutorial here: [MakeCode Arcade Editor](https://arcade.makecode.com/#editor)
