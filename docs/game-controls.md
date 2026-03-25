@@ -102,13 +102,13 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 ```
 This:
 
-increases the level
+- increases the level
 
-loads the next level
+- loads the next level
 
-increases the score
+- increases the score
 
-ends the game if all levels are completed
+- ends the game if all levels are completed
 
 Step 8: Use Update Events (Optional)
 
