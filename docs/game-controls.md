@@ -161,14 +161,3 @@ Game controls and events are essential for making your game interactive and enga
 
 - Keep your code organized
 
-## Common Mistakes
-
-forgetting to enable movement
-
-not handling collisions properly
-
-missing game over condition
-
-not updating score or level
-
-placing logic in the wrong order

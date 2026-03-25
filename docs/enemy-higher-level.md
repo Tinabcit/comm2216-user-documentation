@@ -1,4 +1,4 @@
-# Creating an Higher Level Enemy Sprite in MakeCode Arcade
+# Optional for Enemy
 
 In this tutorial, we will learn how to create an **enemy sprite** in MakeCode Arcade using JavaScript.  
 The enemy sprite will appear in the game, move toward the player, and reduce the player's life when touched.
@@ -98,38 +98,38 @@ let enemy = sprites.create(img`
     . . 2 2 . . . . . . . . 2 2 . .
 `, SpriteKind.Enemy)
 ```
-The type SpriteKind.Enemy tells the game that this sprite represents an enemy character.
+- The type SpriteKind.Enemy tells the game that this sprite represents an enemy character.
 
 ## Step 4: Enabling Player Movement
-Next, we allow the player to move around the game map.
+- Next, we allow the player to move around the game map.
 ``` javascript
 controller.moveSprite(yellowDuck, 100, 100)
 ```
 This command allows the player to move in all directions using the arrow keys.
 
 ## Step 5: Making the Camera Follow the Player
-To keep the player centered on the screen while moving through the level, the camera follows the player sprite.
+- To keep the player centered on the screen while moving through the level, the camera follows the player sprite.
 ``` javascript
 scene.cameraFollowSprite(yellowDuck)
 ```
 This ensures the player stays centered on the screen.
 
 ## Step 6: Adding Game Information
-Add score and life counters.
+- Add score and life counters.
 ``` javascript
 info.setLife(3)
 info.setScore(0)
 ```
-The player starts with three lives.
+- The player starts with three lives.
 
 ## Step 7: Starting the First Level
-Track the current level and load the first level.
+- Track the current level and load the first level.
 ``` javascript
 let currentLevel = 1
 setLevel(currentLevel)
 ```
 ## Step 8: Creating the Level System
-The setLevel() function loads different tilemaps and positions the sprites.
+- The setLevel() function loads different tilemaps and positions the sprites.
 ``` javascript
 function setLevel(level: number) {
     if (level == 1) {
@@ -147,10 +147,10 @@ function setLevel(level: number) {
     }
 }
 ```
-Each level loads a different map and places the enemy in a new location.
+- Each level loads a different map and places the enemy in a new location.
 
 ## Step 9: Programming the Enemy to Follow the Player
-The enemy moves toward the player every second.
+- The enemy moves toward the player every second.
 ``` javascript
 game.onUpdateInterval(1000, function () {
     if (enemy.x < yellowDuck.x) {
@@ -166,7 +166,7 @@ game.onUpdateInterval(1000, function () {
     }
 })
 ```
-This creates a simple enemy chasing behavior.
+- This creates a simple enemy chasing behavior.
 
 ## Step 10: Detecting Collisions Between Player and Enemy
 When the enemy touches the player, the player loses one life.
@@ -181,10 +181,10 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (player, badGuy)
     }
 })
 ```
-If the player loses all lives, the game ends.
+- If the player loses all lives, the game ends.
 
 ## Step 11: Changing Levels
-Press the A button to move to the next level.
+- Press the A button to move to the next level.
 
 ``` javascript
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {

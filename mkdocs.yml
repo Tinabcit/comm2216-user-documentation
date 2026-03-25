@@ -3,4 +3,14 @@ site_name: My Docs
 site_url: https://sitename.example
 theme:
   name: material
+nav:
+  - Documentation: index.md
+  - Home: index.md
+  - Player: player.md
+  - Enemy: enemy.md
+  - Game Controler: game-controls.md
+  - Tile Map: tilemaps-level.md
+  - Troubleshooting: troubleshooting.md
+  - Glossary: glossary.md
+
   
