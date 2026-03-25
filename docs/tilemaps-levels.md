@@ -42,6 +42,7 @@ tiles.setCurrentTilemap(tilemap`level1`)
 ```javascript
 tiles.placeOnTile(player, tiles.getTileLocation(1, 2))
 ```
+
 ![Alt text for the image](img/tile-map-2.png)
 
 - This places the player at position (1, 2) on the grid.
@@ -49,6 +50,7 @@ tiles.placeOnTile(player, tiles.getTileLocation(1, 2))
 ## Step 3: Place the Enemy on the Tilemap
 
 - Next, place the enemy at a different position.
+  
 ```javascript
 tiles.placeOnTile(enemy, tiles.getTileLocation(8, 2))
 ```
@@ -70,6 +72,7 @@ let currentLevel = 1
 - This variable will change as the player progresses.
 
 ## Step 5: Create the setLevel Function
+
 ```javascript
 The setLevel() function loads different tilemaps and positions the sprites.
 
@@ -105,12 +108,17 @@ This function:
 ## Step 6: Load the First Level
 
 - Call the function to load the first level when the game starts.
+
 ```javascript
 setLevel(currentLevel)
 ```
+
+![Alt text for the image](img/tile-map-6.png)
+
 ## Step 7: Change Levels During the Game
 
 - You can change levels when the player presses a button.
+  
 ```javascript
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     currentLevel += 1
@@ -122,6 +130,9 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     }
 })
 ```
+
+![Alt text for the image](img/tile-map-7.png)
+
 - This allows the player to move through levels.
 
 ## Step 8: Improve Level Design

@@ -125,7 +125,9 @@ scene.cameraFollowSprite(yellowDuck)
 This ensures the player stays centered on the screen.
 
 ## Step 6: Adding Game Information
+
 - Add score and life counters.
+  
 ``` javascript
 info.setLife(3)
 info.setScore(0)

@@ -65,17 +65,13 @@ When looking through this documentation, there will be a few typographical conve
 Through our documentation, various notification blocks will be used to quickly signal for information, warnings, or possible failures. Below are the main blocks that will be used, as well as what their purpose would be.
 
 !!! Success
-
     This block is used to signify success, or when a task is successfully completed.
 
 !!! Info
-
     This block is used to signify useful information, such as tips for you to follow. It can also be used when giving background context to a certain piece of code or software.
 
 !!! Warning
-
     This block is used to signify warnings, such as when instructions become tricky or easy to misinterpret.
 
 !!! Danger
-
     This block is used to signify urgent warnings, such as when the instruction includes code that, if executed incorrectly, can cause major bugs or even application crashes.
