@@ -88,4 +88,4 @@ After completing this section, you'll have the following:
 * A camera that will follow your player sprite around.
 
 You can now move on to the next section, Enemy Sprites and Interaction. Nice work!
- [Enemy Page](docs/enemy.md)
+ [Enemy Page](enemy.md)
