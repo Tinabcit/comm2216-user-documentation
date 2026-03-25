@@ -14,7 +14,7 @@ Sprites are what MakeCode Arcade uses to refer to entities, or characters in the
 2. Once you've clicked on 'Sprites', you'll see a few subsections. The 'Create' one should be at the top, alongside the code block that says 'sprite img of kind kind.'
 3. **Click** and **drag** that out of the menu, and you'll have the block. **Drag** the block into the blank area. You can **let go** of the block, and you'll know it was added correctly if the code below appears.
 
-```Javascript
+```javascript
     let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -38,7 +38,7 @@ Sprites are what MakeCode Arcade uses to refer to entities, or characters in the
 !!! Info
     If you put in code incorrectly, you can delete it by **highlighting** with your mouse and hitting backspace. Or, you can hit ctrl+z to undo your last move, as well as shift+ctrl+z to redo your last move.
 4. Right now, your player sprite is blank. To fix that, you can edit the dots to be other characters, which will reflect in the sprite. For the purpose of this documentation, **copy** and **paste** the code below in place of your empty sprite code, so that this new sprite is the only thing in your editor. This should turn your sprite into an apple. Optionally, you can create your own sprite by clicking the small floating palette that appears next to the code.
-```Javascript
+```javascript
     let mySprite = sprites.create(img`
     . . . . . . . e c 7 . . . . . . 
     . . . . e e e c 7 7 e e . . . . 
@@ -72,7 +72,7 @@ Now that we have our player sprite, you'll want to set up controls. Before that,
 ![Alt text for the image](img/player_4.png)
 2. Similar to the last section, **click** and **drag** this block out of the menu into your code field. The code that appears should look like this.
 
-```Javascript
+```javascript
     scene.cameraFollowSprite(mySprite)
 ```
 

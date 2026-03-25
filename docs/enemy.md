@@ -10,7 +10,7 @@ MakeCode Arcade offers sprites of a few different types. In the past section, we
 
 1. First, navigate to the 'sprites' section of the code blocks and select the same 'sprite img of kind kind.' **Click** and **drag** this into your code editor, and make sure it's on a new line. You should see similar code like this. Note that it says mySprite2 instead of mySprite, as it's a different sprite.
 
-```Javascript
+```javascript
     let mySprite2 = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -33,7 +33,7 @@ MakeCode Arcade offers sprites of a few different types. In the past section, we
 
 2. Right now, this sprite is also a player. To change it to an enemy, we'll need to change the SpriteKind variable. **Delete** where it says 'Player', and type in 'Enemy' instead. You should have code that looks like this.
 
-```Javascript
+```javascript
     let mySprite2 = sprites.create(img`
     . . . . . . . . . . . . . . . .
     . . . . . . . . . . . . . . . .
@@ -56,7 +56,7 @@ MakeCode Arcade offers sprites of a few different types. In the past section, we
 
 3. Once again, we'll want to set a custom sprite so our enemy isn't invisible. Similar to the Player section, you can click the floating palette and use the editor to create your own, or **copy** and **paste** the code below and replace your blank enemy code. You should now see a little lemon in your game window.
 
-```Javascript
+```javascript
     let mySprite2 = sprites.create(img`
     4 4 4 . . 4 4 4 4 4 . . . . . .
     4 5 5 4 4 5 5 5 5 5 4 4 . . . .
@@ -86,19 +86,19 @@ Right now, your enemy won't move at all. This isn't ideal for a chasing game, so
 
 1. Navigate to the 'sprites' section of the code block menu, then the 'physics' subsection. Select the block that says 'Set myenemy follow mysprite.' Click and drag this into your code window. The code should look like this.
 
-```Javascript
+```javascript
     myEnemy.follow(mySprite)
 ```
 
 2. Right now, you'll see a squiggly red line underneath the word 'myEnemy.' This is because that's not the name of our sprites! MakeCode Arcade is looking for a sprite named 'myEnemy', and can't find one. To fix this, **delete** only the word 'myEnemy.' Replace this with the name of your enemy, which is 'mySprite2.' Your code should look like this.
 
-```Javascript
+```javascript
     mySprite2.follow(mySprite)
 ```
 
 3. In the current state of the game, the enemy and player will move at the same speed when controls are implemented. To fix this, lets preemptively reduce the speed of our enemy. We'll edit your follow code again. Right now, it takes in the name of the sprite being followed, and we'll just add another number to signify how fast it should follow. **Type** a comma after the word mySprite, and add a number. Your code should look like the snippet below.
 
-```Javascript
+```javascript
     mySprite2.follow(mySprite, 70)
 ```
 
