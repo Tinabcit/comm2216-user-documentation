@@ -113,4 +113,4 @@ After completing this section, you'll have the following:
 * An enemy that follows your player around.
 
 Nice work! You can move on to further customizing your game in the next section, Customization.
-[comment]: # (Customization links to the customization page)
+ [Enemy Customization Page](docs/enemy-higher-level.md)
