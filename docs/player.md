@@ -35,7 +35,7 @@ Sprites are what MakeCode Arcade uses to refer to entities, or characters in the
     `, SpriteKind.Player)
 ```
 
-!!! Info
+!!! info
     If you put in code incorrectly, you can delete it by **highlighting** with your mouse and hitting backspace. Or, you can hit ctrl+z to undo your last move, as well as shift+ctrl+z to redo your last move.
 
 
@@ -62,7 +62,7 @@ Sprites are what MakeCode Arcade uses to refer to entities, or characters in the
     `, SpriteKind.Player)
 ```
 
-!!! info
+!!!info
     The reason this code uses numbers and letters to show what the sprite looks like is because we can't put an image directly into our code. So the editor uses specific numbers and letters to signify each colour, so every letter and number is really a coloured pixel in your sprite!
 
 
