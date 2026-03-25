@@ -36,7 +36,7 @@ Before starting this tutorial, make sure you:
 
 You can open MakeCode Arcade here:
 
-https://arcade.makecode.com/
+[MakeCode Arcade](https://arcade.makecode.com/)
 
 ---
 
@@ -132,16 +132,22 @@ This ensures the player stays centered on the screen.
 info.setLife(3)
 info.setScore(0)
 ```
+
 - The player starts with three lives.
 
 ## Step 7: Starting the First Level
+
 - Track the current level and load the first level.
+  
 ``` javascript
 let currentLevel = 1
 setLevel(currentLevel)
 ```
+
 ## Step 8: Creating the Level System
+
 - The setLevel() function loads different tilemaps and positions the sprites.
+  
 ``` javascript
 function setLevel(level: number) {
     if (level == 1) {
@@ -159,10 +165,13 @@ function setLevel(level: number) {
     }
 }
 ```
+
 - Each level loads a different map and places the enemy in a new location.
 
 ## Step 9: Programming the Enemy to Follow the Player
+
 - The enemy moves toward the player every second.
+
 ``` javascript
 game.onUpdateInterval(1000, function () {
     if (enemy.x < yellowDuck.x) {
@@ -178,10 +187,13 @@ game.onUpdateInterval(1000, function () {
     }
 })
 ```
+
 - This creates a simple enemy chasing behavior.
 
 ## Step 10: Detecting Collisions Between Player and Enemy
+
 When the enemy touches the player, the player loses one life.
+
 ``` javascript
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (player, badGuy) {
     info.changeLifeBy(-1)
@@ -193,9 +205,11 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (player, badGuy)
     }
 })
 ```
+
 - If the player loses all lives, the game ends.
 
 ## Step 11: Changing Levels
+
 - Press the A button to move to the next level.
 
 ``` javascript
@@ -214,6 +228,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 When all levels are completed, the player wins the game.
 
 ## Summary
+
 In this tutorial, you learned how to:
 
 - create a player sprite
