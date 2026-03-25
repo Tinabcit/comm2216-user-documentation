@@ -20,7 +20,7 @@ tiles.placeOnTile(enemy, tiles.getTileLocation(8, 2))
 ```
 Enemy is not moving
 
-Cause:
+**Cause:**
 
 Missing movement logic
 
@@ -35,7 +35,7 @@ game.onUpdateInterval(1000, function () {
 ```
 Enemy is not following the player
 
-Cause:
+**Cause:**
 
 No position comparison logic
 
@@ -49,7 +49,7 @@ if (enemy.x < yellowDuck.x) {
 Player Issues
 Player cannot move
 ```
-Cause:
+**Cause:**
 
 Movement not enabled
 
@@ -59,7 +59,7 @@ controller.moveSprite(yellowDuck, 100, 100)
 ```
 Camera does not follow player
 
-Cause:
+**Cause:**
 
 Camera function missing
 
@@ -70,7 +70,7 @@ scene.cameraFollowSprite(yellowDuck)
 Collision Issues
 Player does not lose life
 
-Cause:
+**Cause:**
 
 Overlap event missing or incorrect
 
@@ -82,7 +82,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function () {
 ```
 Game does not end
 
-Cause:
+**Cause:**
 
 Missing game over condition
 
@@ -95,7 +95,7 @@ if (info.life() <= 0) {
 Level Issues
 Levels do not change
 
-Cause:
+**Cause:**
 
 Button event missing
 
@@ -110,18 +110,19 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 ```
 Sprites appear in wrong position
 
-Cause:
+**Cause:**
 
-Incorrect tile coordinates
+- Incorrect tile coordinates
 
 Solution:
 ```javascript
 tiles.placeOnTile(enemy, tiles.getTileLocation(8, 2))
 ```
-General Errors
+
+- General Errors
 Code not running or showing errors
 
-Cause:
+**Cause:**
 
 Syntax errors (missing brackets, wrong names)
 
@@ -129,22 +130,22 @@ Solution:
 
 Check:
 
-variable names (yellowDuck, enemy)
+- variable names (yellowDuck, enemy)
 
-brackets { }
+- brackets { }
 
-parentheses ( )
+- parentheses ( )
 
-spelling mistakes
+- spelling mistakes
 
-Debugging Tips
+## Debugging Tips
 
-Test your game after each change
+- Test your game after each change
 
-Start with simple values
+- Start with simple values
 
-Keep code organized
+- Keep code organized
 
-Add comments to understand your code
+- Add comments to understand your code
 
-Fix one problem at a time.
+- Fix one problem at a time.
