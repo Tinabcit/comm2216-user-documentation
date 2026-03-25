@@ -77,7 +77,7 @@ MakeCode Arcade offers sprites of a few different types. In the past section, we
     `, SpriteKind.Enemy)
 ```
 
-!!! Info
+!!! info
     Don't worry if you can't see your apple sprite from the last section anymore! By default, the sprites are placed in the same spot, so they're overlapping. Your apple is still there, just underneath the lemon.
 
 ## Setting up speed and following behaviour
@@ -102,7 +102,7 @@ Right now, your enemy won't move at all. This isn't ideal for a chasing game, so
     mySprite2.follow(mySprite, 70)
 ```
 
-!!! Info
+!!! info
     It'll still look like nothing is happening. Don't worry! This will be fixed in the next section, where we set up controls for the player.
 
 ## Conclusion
