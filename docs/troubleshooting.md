@@ -11,20 +11,24 @@ If your game is not working correctly, check the issues below and follow the sug
 ### Enemy does not appear
 
 **Cause:**
+
 - Enemy sprite not created or not placed on the map
 
 **Solution:**
+
 ```javascript
 let enemy = sprites.create(img`...`, SpriteKind.Enemy)
 tiles.placeOnTile(enemy, tiles.getTileLocation(8, 2))
 ```
-Enemy is not moving
+
+- Enemy is not moving
 
 **Cause:**
 
-Missing movement logic
+- Missing movement logic
 
-Velocity not set
+- Velocity not set
+  
 ```javascript
 Solution:
 
@@ -33,13 +37,15 @@ game.onUpdateInterval(1000, function () {
     enemy.vy = 30
 })
 ```
-Enemy is not following the player
+
+- Enemy is not following the player
 
 **Cause:**
 
-No position comparison logic
+- No position comparison logic
 
 Solution:
+
 ```javascript
 if (enemy.x < yellowDuck.x) {
     enemy.vx = 30
@@ -49,72 +55,84 @@ if (enemy.x < yellowDuck.x) {
 Player Issues
 Player cannot move
 ```
+
 **Cause:**
 
-Movement not enabled
+- Movement not enabled
 
 Solution:
+
 ```javascript
 controller.moveSprite(yellowDuck, 100, 100)
 ```
-Camera does not follow player
+
+- Camera does not follow player
 
 **Cause:**
 
-Camera function missing
+- Camera function missing
 
 Solution:
+
 ```javascript
 scene.cameraFollowSprite(yellowDuck)
 ```
-Collision Issues
-Player does not lose life
+
+- Collision Issues
+- Player does not lose life
 
 **Cause:**
 
-Overlap event missing or incorrect
+- Overlap event missing or incorrect
 
 Solution:
+
 ```javascript
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function () {
     info.changeLifeBy(-1)
 })
 ```
-Game does not end
+
+- Game does not end
 
 **Cause:**
 
-Missing game over condition
+- Missing game over condition
 
 Solution:
+
 ```javascript
 if (info.life() <= 0) {
     game.over(false)
 }
 ```
-Level Issues
-Levels do not change
+
+- Level Issues
+- Levels do not change
 
 **Cause:**
 
-Button event missing
+- Button event missing
 
-Level variable not updated
+- Level variable not updated
 
 Solution:
+
 ```javascript
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     currentLevel += 1
     setLevel(currentLevel)
 })
 ```
-Sprites appear in wrong position
+
+- Sprites appear in wrong position
 
 **Cause:**
 
 - Incorrect tile coordinates
 
 Solution:
+
 ```javascript
 tiles.placeOnTile(enemy, tiles.getTileLocation(8, 2))
 ```
@@ -124,7 +142,7 @@ Code not running or showing errors
 
 **Cause:**
 
-Syntax errors (missing brackets, wrong names)
+- Syntax errors (missing brackets, wrong names)
 
 Solution:
 
