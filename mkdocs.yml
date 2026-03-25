@@ -9,9 +9,9 @@ nav:
   - Player: player.md
   - Enemy: enemy.md
   - Game Controler: game-controls.md
-  - Tile Map: tilemaps-levels.md
+  - TileMap: tilemaps-levels.md
   - Troubleshooting: troubleshooting.md
   - Glossary: glossary.md
-  - Optional Enemy: enermy-higher-level.md
+  - Optional Enemy: enemy-higher-level.md
 
   

@@ -43,6 +43,8 @@ info.setLife(3)
 ```
 This gives the player 3 lives at the start of the game.
 
+![Alt text for the image](img/game-controller-2.png)
+
 ## Step 3: Add Score System
 
 The score system tracks the player’s progress.
@@ -53,6 +55,8 @@ You can increase the score when the player completes a level:
 ```javascript
 info.changeScoreBy(1)
 ```
+
+
 ## Step 4: Detect Collision Between Player and Enemy
 
 Use an overlap event to detect when the player touches the enemy.
@@ -65,6 +69,8 @@ When a collision happens:
 
 the player loses one life
 
+![Alt text for the image](img/game-controller-3.png)
+
 ## Step 5: Reset Player Position After Collision
 
 After a collision, it is helpful to reset the player’s position.
@@ -73,6 +79,8 @@ tiles.placeOnTile(yellowDuck, tiles.getTileLocation(1, 2))
 pause(500)
 ```
 This prevents immediate repeated collisions.
+
+![Alt text for the image](img/game-controller-4.png)
 
 ## Step 6: End Game When Life Reaches Zero
 

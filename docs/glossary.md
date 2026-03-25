@@ -11,15 +11,23 @@ controller.moveSprite(player, 100, 100)
 ```
 1. Blocks
 - A visual way of coding where you drag and connect blocks instead of typing code.
+![Alt text for the image](img/glossary-1.png)
+
 
 2. Sprite
 - A visual object in the game, such as a player, enemy, or item.
+
+
 Example:
 ```javascript
 let player = sprites.create(img`...`, SpriteKind.Player)
 ```
+
+![Alt text for the image](img/glossary-2.png)
 3. Player Sprite
 - The main character controlled by the user.
+
+![Alt text for the image](img/glossary-3.png)
 
 4. Enemy Sprite
 - A sprite that challenges the player by chasing or interacting with them.
@@ -27,6 +35,10 @@ Example:
 ```javascript
 let enemy = sprites.create(img`...`, SpriteKind.Enemy)
 ```
+
+![Alt text for the image](img/glossary-4.png)
+
+
 5. SpriteKind
 - A category used to define types of sprites (Player, Enemy, etc.).
 Example:
@@ -34,18 +46,26 @@ Example:
 SpriteKind.Player
 SpriteKind.Enemy
 ```
+
+![Alt text for the image](img/glossary-5.png)
 6. Tilemap
 - A grid-based layout that defines the game level.
 Example:
 ```javascript
 tiles.setCurrentTilemap(tilemap`level1`)
 ```
+
+![Alt text for the image](img/glossary-6.png)
+
 7.  Location
 - A position on the tilemap grid where sprites are placed.
 Example:
 ```javascript
 tiles.placeOnTile(player, tiles.getTileLocation(1, 2))
 ```
+
+![Alt text for the image](img/glossary-7.png)
+
 8. Collision (Overlap)
 - When two sprites touch each other and trigger an event.
 Example:
@@ -61,40 +81,42 @@ Example:
 enemy.vx = 30
 enemy.vy = -30
 ```
-10. Event
+
+![Alt text for the image](img/glossary-1.png)
+10.   Event
 - A trigger that runs code when something happens (like a button press).
 Example:
 ```javascript
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {})
 ```
-11. Function
+1.   Function
 - A reusable block of code used to perform a task.
 Example:
 ```javascript
 function setLevel(level: number) {}
 ```
-12. Level
+1.   Level
 - A stage in the game with its own layout and difficulty.
 
-13. Camera
+1.   Camera
 - Controls what part of the game is visible on screen.
 Example:
 ```javascript
 scene.cameraFollowSprite(player)
 ```
-14. Score
+1.   Score
 - Tracks the player’s progress or achievements.
 Example:
 ```javascript
 info.changeScoreBy(1)
 ```
-15. Life
+1.   Life
 - Represents how many chances the player has before the game ends.
 Example:
 ```javascript
 info.setLife(3)
 ```
-16. Update Interval
+1.   Update Interval
 - A loop that runs code repeatedly after a set time.
 Example:
 ```javascript
