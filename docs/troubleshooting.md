@@ -21,6 +21,8 @@ let enemy = sprites.create(img`...`, SpriteKind.Enemy)
 tiles.placeOnTile(enemy, tiles.getTileLocation(8, 2))
 ```
 
+![Alt text for the image](img/troubleshooting-1.png)
+
 - Enemy is not moving
 
 **Cause:**
@@ -29,8 +31,10 @@ tiles.placeOnTile(enemy, tiles.getTileLocation(8, 2))
 
 - Velocity not set
   
+**Solution:**
+
 ```javascript
-Solution:
+
 
 game.onUpdateInterval(1000, function () {
     enemy.vx = 30
@@ -38,13 +42,15 @@ game.onUpdateInterval(1000, function () {
 })
 ```
 
+![Alt text for the image](img/troubleshooting-2.png)
+
 - Enemy is not following the player
 
 **Cause:**
 
 - No position comparison logic
 
-Solution:
+**Solution:**
 
 ```javascript
 if (enemy.x < yellowDuck.x) {
@@ -56,15 +62,19 @@ Player Issues
 Player cannot move
 ```
 
+![Alt text for the image](img/troubleshooting-3.png)
+
 **Cause:**
 
 - Movement not enabled
 
-Solution:
+**Solution:**
 
 ```javascript
 controller.moveSprite(yellowDuck, 100, 100)
 ```
+
+![Alt text for the image](img/troubleshooting-3.png)
 
 - Camera does not follow player
 
@@ -72,11 +82,13 @@ controller.moveSprite(yellowDuck, 100, 100)
 
 - Camera function missing
 
-Solution:
+**Solution:**
 
 ```javascript
 scene.cameraFollowSprite(yellowDuck)
 ```
+
+![Alt text for the image](img/troubleshooting-4.png)
 
 - Collision Issues
 - Player does not lose life
@@ -85,7 +97,7 @@ scene.cameraFollowSprite(yellowDuck)
 
 - Overlap event missing or incorrect
 
-Solution:
+**Solution:**
 
 ```javascript
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function () {
@@ -93,19 +105,23 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function () {
 })
 ```
 
+![Alt text for the image](img/troubleshooting-5.png)
+
 - Game does not end
 
 **Cause:**
 
 - Missing game over condition
 
-Solution:
+**Solution:**
 
 ```javascript
 if (info.life() <= 0) {
     game.over(false)
 }
 ```
+
+![Alt text for the image](img/troubleshooting-6.png)
 
 - Level Issues
 - Levels do not change
@@ -116,7 +132,7 @@ if (info.life() <= 0) {
 
 - Level variable not updated
 
-Solution:
+**Solution:**
 
 ```javascript
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -125,17 +141,21 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 ```
 
+![Alt text for the image](img/troubleshooting-7.png)
+
 - Sprites appear in wrong position
 
 **Cause:**
 
 - Incorrect tile coordinates
 
-Solution:
+**Solution:**
 
 ```javascript
 tiles.placeOnTile(enemy, tiles.getTileLocation(8, 2))
 ```
+
+![Alt text for the image](img/troubleshooting-8.png)
 
 - General Errors
 Code not running or showing errors
@@ -144,7 +164,7 @@ Code not running or showing errors
 
 - Syntax errors (missing brackets, wrong names)
 
-Solution:
+**Solution:**
 
 Check:
 
