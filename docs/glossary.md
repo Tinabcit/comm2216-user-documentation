@@ -18,18 +18,17 @@ controller.moveSprite(player, 100, 100)
 - A visual object in the game, such as a player, enemy, or item.
 
 
-Example:
+
+3. Player Sprite
+- The main character controlled by the user.
+- Example:
 ```javascript
 let player = sprites.create(img`...`, SpriteKind.Player)
 ```
 
-![Alt text for the image](img/glossary-2.png)
-3. Player Sprite
-- The main character controlled by the user.
-
 ![Alt text for the image](img/glossary-3.png)
 
-4. Enemy Sprite
+1. Enemy Sprite
 - A sprite that challenges the player by chasing or interacting with them.
 Example:
 ```javascript
@@ -48,6 +47,8 @@ SpriteKind.Enemy
 ```
 
 ![Alt text for the image](img/glossary-5.png)
+
+
 6. Tilemap
 - A grid-based layout that defines the game level.
 Example:
@@ -82,43 +83,49 @@ enemy.vx = 30
 enemy.vy = -30
 ```
 
-![Alt text for the image](img/glossary-1.png)
+![Alt text for the image](img/glossary-8.png)
 10.   Event
 - A trigger that runs code when something happens (like a button press).
 Example:
 ```javascript
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {})
 ```
-1.   Function
+![Alt text for the image](img/glossary-9.png)
+11.   Function
 - A reusable block of code used to perform a task.
 Example:
 ```javascript
 function setLevel(level: number) {}
 ```
-1.   Level
+![Alt text for the image](img/glossary-10.png)
+12.   Level
 - A stage in the game with its own layout and difficulty.
 
-1.   Camera
+13.   Camera
 - Controls what part of the game is visible on screen.
 Example:
 ```javascript
 scene.cameraFollowSprite(player)
 ```
-1.   Score
+![Alt text for the image](img/glossary-11.png)
+14.   Score
 - Tracks the player’s progress or achievements.
 Example:
 ```javascript
 info.changeScoreBy(1)
 ```
-1.   Life
+![Alt text for the image](img/glossary-12.png)
+15.   Life
 - Represents how many chances the player has before the game ends.
 Example:
 ```javascript
 info.setLife(3)
 ```
-1.   Update Interval
+![Alt text for the image](img/glossary-13.png)
+16.   Update Interval
 - A loop that runs code repeatedly after a set time.
 Example:
 ```javascript
 game.onUpdateInterval(1000, function () {})
 ```
+![Alt text for the image](img/glossary-14.png)
