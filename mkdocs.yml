@@ -5,12 +5,13 @@ theme:
   name: material
 nav:
   - Documentation: index.md
-  - Home: index.md
+  - Home: body.md
   - Player: player.md
   - Enemy: enemy.md
   - Game Controler: game-controls.md
-  - Tile Map: tilemaps-level.md
+  - Tile Map: tilemaps-levels.md
   - Troubleshooting: troubleshooting.md
   - Glossary: glossary.md
+  - Optional Enemy: enermy-higher-level.md
 
   

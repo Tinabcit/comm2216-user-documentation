@@ -60,4 +60,4 @@ After completing this section, you'll have the following:
 * A tilemap for your player sprite to move around in.
 
 You can now move on to the next section, Enemy Sprites and Interaction. Nice work!
-[comment]: # (Enemy Sprites and Interaction links to the enemy page)
+Check out the [Markdown Guide](docs/enemy.md) for more information.
