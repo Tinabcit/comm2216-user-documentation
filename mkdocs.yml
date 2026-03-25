@@ -6,7 +6,8 @@ theme:
   features:
     - content.code.copy
 nav:
-  - Home: body.md
+  - Home: intro.md
+  - Installation: body.md
   - Player: player.md
   - Enemy: enemy.md
   - Game Controler: game-controls.md

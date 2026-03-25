@@ -141,6 +141,8 @@ This is useful for:
 
 - repeated actions
 
+![Alt text for the image](img/game-controller-7.png)
+
 ## Summary
 
 In this tutorial, you learned how to:

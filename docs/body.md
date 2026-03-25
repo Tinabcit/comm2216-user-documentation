@@ -15,19 +15,7 @@ The easiest way to start is by using the browser version.
 3. Wait for the editor to load.
 4. Once the page opens, you can begin creating your game right away without installing anything.
 
-## Option 2: Install MakeCode Arcade on Windows
 
-If you prefer to use the desktop app, you can install MakeCode Arcade on your computer.
-
-1. Open your web browser.
-2. Go to the official MakeCode Arcade website: [MakeCode Arcade](https://arcade.makecode.com/)
-3. Look for the **Download** option on the website.
-4. The site may automatically detect your operating system and show the correct installer.
-5. If needed, choose the Windows version manually.
-6. Download the installer.
-7. Open the downloaded file.
-8. Follow the installation steps shown on your screen.
-9. Once the installation is complete, open MakeCode Arcade from your computer.
 
 ## Opening the Editor
 
