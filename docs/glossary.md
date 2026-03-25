@@ -75,6 +75,8 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function () {
     info.changeLifeBy(-1)
 })
 ```
+![Alt text for the image](img/glossary-7-1.png)
+
 9. Velocity
 - The speed and direction of a sprite’s movement using vx and vy.
 Example:
@@ -91,6 +93,7 @@ Example:
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {})
 ```
 ![Alt text for the image](img/glossary-9.png)
+
 11.   Function
 - A reusable block of code used to perform a task.
 Example:
