@@ -3,8 +3,9 @@ site_name: My Docs
 site_url: https://sitename.example
 theme:
   name: material
+  features:
+    - content.code.copy
 nav:
-  - Documentation: index.md
   - Home: body.md
   - Player: player.md
   - Enemy: enemy.md

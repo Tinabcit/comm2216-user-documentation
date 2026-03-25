@@ -94,6 +94,8 @@ false means the player loses
 
 true would mean the player wins
 
+![Alt text for the image](img/game-controller-5.png)
+
 ## Step 7: Create Button Event for Level Change
 
 Use a button event to allow the player to move to the next level.
@@ -109,6 +111,10 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     }
 })
 ```
+
+![Alt text for the image](img/game-controller-6.png)
+
+
 This:
 
 - increases the level

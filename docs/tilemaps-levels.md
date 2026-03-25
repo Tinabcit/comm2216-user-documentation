@@ -12,6 +12,7 @@ A **tilemap** is a grid-based layout that represents your game world.
 Each tile can represent ground, walls, or special areas.
 
 Tilemaps are important because they:
+
 - define the structure of the level  
 - control where sprites can move  
 - determine where objects are placed  
@@ -26,14 +27,23 @@ In JavaScript, you load a tilemap using:
 ```javascript
 tiles.setCurrentTilemap(tilemap`level1`)
 ```
+
+
+![Alt text for the image](img/tile-map-0.png)
+
 - This sets the current level layout to level1.
+
+![Alt text for the image](img/tile-map-1.png)
 
 ## Step 2: Place the Player on the Tilemap
 
 - After loading the tilemap, place the player at a specific location.
+  
 ```javascript
 tiles.placeOnTile(player, tiles.getTileLocation(1, 2))
 ```
+![Alt text for the image](img/tile-map-2.png)
+
 - This places the player at position (1, 2) on the grid.
 
 ## Step 3: Place the Enemy on the Tilemap
@@ -42,14 +52,21 @@ tiles.placeOnTile(player, tiles.getTileLocation(1, 2))
 ```javascript
 tiles.placeOnTile(enemy, tiles.getTileLocation(8, 2))
 ```
+
+![Alt text for the image](img/tile-map-3.png)
+
 - This ensures the enemy appears in the correct location when the level starts.
 
 ## Step 4: Create a Level Variable
 
 - To manage multiple levels, create a variable to track the current level.
+  
 ```javascript
 let currentLevel = 1
 ```
+
+![Alt text for the image](img/tile-map-4.png)
+
 - This variable will change as the player progresses.
 
 ## Step 5: Create the setLevel Function
@@ -74,6 +91,9 @@ function setLevel(level: number) {
     }
 }
 ```
+
+![Alt text for the image](img/tile-map-5.png)
+
 This function:
 
 - loads a different tilemap
