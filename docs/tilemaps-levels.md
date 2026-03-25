@@ -20,39 +20,39 @@ Tilemaps are important because they:
 
 ## Step 1: Create a Tilemap
 
-In MakeCode Arcade, tilemaps are usually created using the built-in editor.  
+- In MakeCode Arcade, tilemaps are usually created using the built-in editor.  
 In JavaScript, you load a tilemap using:
 
 ```javascript
 tiles.setCurrentTilemap(tilemap`level1`)
 ```
-This sets the current level layout to level1.
+- This sets the current level layout to level1.
 
-Step 2: Place the Player on the Tilemap
+## Step 2: Place the Player on the Tilemap
 
-After loading the tilemap, place the player at a specific location.
+- After loading the tilemap, place the player at a specific location.
 ```javascript
 tiles.placeOnTile(player, tiles.getTileLocation(1, 2))
 ```
-This places the player at position (1, 2) on the grid.
+- This places the player at position (1, 2) on the grid.
 
-Step 3: Place the Enemy on the Tilemap
+## Step 3: Place the Enemy on the Tilemap
 
-Next, place the enemy at a different position.
+- Next, place the enemy at a different position.
 ```javascript
 tiles.placeOnTile(enemy, tiles.getTileLocation(8, 2))
 ```
-This ensures the enemy appears in the correct location when the level starts.
+- This ensures the enemy appears in the correct location when the level starts.
 
-Step 4: Create a Level Variable
+## Step 4: Create a Level Variable
 
-To manage multiple levels, create a variable to track the current level.
+- To manage multiple levels, create a variable to track the current level.
 ```javascript
 let currentLevel = 1
 ```
-This variable will change as the player progresses.
+- This variable will change as the player progresses.
 
-Step 5: Create the setLevel Function
+## Step 5: Create the setLevel Function
 ```javascript
 The setLevel() function loads different tilemaps and positions the sprites.
 
@@ -76,21 +76,21 @@ function setLevel(level: number) {
 ```
 This function:
 
-loads a different tilemap
+- loads a different tilemap
 
-moves the player to a starting position
+- moves the player to a starting position
 
-places the enemy in a new location
+- places the enemy in a new location
 
-Step 6: Load the First Level
+## Step 6: Load the First Level
 
-Call the function to load the first level when the game starts.
+- Call the function to load the first level when the game starts.
 ```javascript
 setLevel(currentLevel)
 ```
-Step 7: Change Levels During the Game
+## Step 7: Change Levels During the Game
 
-You can change levels when the player presses a button.
+- You can change levels when the player presses a button.
 ```javascript
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     currentLevel += 1
@@ -102,32 +102,32 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     }
 })
 ```
-This allows the player to move through levels.
+- This allows the player to move through levels.
 
-Step 8: Improve Level Design
+## Step 8: Improve Level Design
 
 To make your levels better:
 
-place walls to block movement
+- place walls to block movement
 
-create paths for the player
+- create paths for the player
 
-position enemies strategically
+- position enemies strategically
 
-increase difficulty in each level
+- increase difficulty in each level
 
-Summary
+## Summary
 
 In this tutorial, you learned how to:
 
-create and load tilemaps
+- create and load tilemaps
 
-place sprites on specific tiles
+- place sprites on specific tiles
 
-manage multiple levels
+- manage multiple levels
 
-use a function to switch levels
+- use a function to switch levels
 
-control level progression
+- control level progression
 
 Tilemaps and levels are essential for building structured and engaging games.

@@ -1,225 +1,61 @@
-# Creating an Enemy Sprite in MakeCode Arcade
+# Enemy Sprites
 
-In this tutorial, we will learn how to create an **enemy sprite** in MakeCode Arcade using JavaScript.  
-The enemy sprite will appear in the game, move toward the player, and reduce the player's life when touched.
+## Overview
 
-Enemy sprites help make games more interactive because they create obstacles and challenges for the player.
+The second step to creating a game is to have an enemy for the player to interact with. In this section, we'll cover creating an enemy sprite, and making it so that they follow and attack the player, causing them to lose health. This section will not be in depth in the basics of how to set sprites or drag code blocks, as this was introduced in the previous section, Player Sprites and Movement.
 
----
+## Creating a enemy sprite
 
-## Introduction to Enemy Sprites
+MakeCode Arcade offers sprites of a few different types. In the past section, we covered the 'player' type. Here, we'll go over creating an 'enemy' type.
 
-In many arcade games, enemies are characters that move around the game world and interact with the player.  
-In this tutorial, we will create an enemy sprite and program it so that it follows the player and affects the player's lives when they collide.
+1. First, navigate to the 'sprites' section of the code blocks and select the same 'set mysprite2 to sprite of type player' that you used to create your player sprite. Click and drag this into your 'on start' button, with the order here not mattering.
+2. To change this sprite to be an enemy, you'll need to click on the 'player' text at the end of the block, which will open up a dropdown menu. Select the type 'enemy' by clicking on it.
+![Alt text for the image](img/enemy_1.png)
+3. As covered more in depth in the Player Sprites and Movement section, you'll want to set a custom sprite so this enemy is visible. Click the gray square, then navigate to the gallery and select a premade sprite and hit done.
 
-By the end of this guide, you will understand how to:
+## Setting up speed and following behaviour
 
-- create a player sprite
-- create an enemy sprite
-- control player movement
-- use the camera to follow the player
-- add game information such as score and lives
-- load multiple levels
-- move the enemy toward the player
-- detect collisions between sprites
-- change levels during gameplay
+Right now, your enemy won't move at all. This isn't ideal for a chasing game, so we'll now go over making this new enemy chase your player sprite around, and reducing their speed so that it's a fair game.
 
----
+1. Navigate to the 'sprites' section of the code block menu, then the 'physics' subsection. Select the block that says 'Set myenemy follow mysprite.' Click and drag this into your 'on start' block.
+![Alt text for the image](img/enemy_2.png)
+!!! Info
+    All the sprites have their own names. Make sure the follower and following sprites match your player and enemy sprites, by clicking on the sprite names and selecting the right one from the dropdown.
+![Alt text for the image](img/enemy_3.png)
+1. Our enemy currently moves too quickly, overlapping with the player most of the time. In an actual game, this would be unfair as it would cause constant damage. To fix this, navigate back to your follow code block. There will be a plus symbol at the end. Click this, and your code block will change to now say 'with speed 100.'
+![Alt text for the image](img/enemy_4.png)
+2. Change the 100 to a lower number of your choice by clicking on the number, and typing in another.
 
-## Prerequisites
+## Setting up player health
 
-Before starting this tutorial, make sure you:
+1. To make your player character have lives, navigate to the 'info' section of the code block menu. Under the 'life' subsection, select the 'set life to 3' code block, and click and drag it into your 'on start' block. When your game runs again, you'll now see three hearts in the top left corner.
+![Alt text for the image](img/enemy_5.png)
 
-- have access to **MakeCode Arcade**
-- understand basic **JavaScript or Blocks**
-- know how to create a **new MakeCode Arcade project**
+## Setting up enemy damage
 
-You can open MakeCode Arcade here:
+After setting up our enemy to follow and player health, nothing will happen when the player and enemy touch. Don't worry! This isn't a bug either. We'll go over setting up a health and damage system in this section.
 
-https://arcade.makecode.com/
+1. Navigate to the 'sprites' section of the code block menu. Scroll down to the 'overlaps' section and select the code block that says 'on sprite of kind player overlaps othersprite of kind player.' Unlike the other code blocks we've worked with so far, you don't want to drag this one into your 'on start' block, as it won't work. You can drag this one our into the open space in your editor and let it sit by itself.
+![Alt text for the image](img/enemy_6.png)
+!!! Info
+    Make sure you click on one instance of 'player' and change it in the dropdown to say 'enemy.' This makes sure the two types interact properly, and not just overlap without anything happening.
+1. Navigate to the 'info' section of the code block menu. Under the 'life' subsection, select the block that says 'change life by -1.' Click and drag this code block into your overlap code block, not your 'on start.'
+![Alt text for the image](img/enemy_7.png)
+!!! Warning
+    Make sure your change life code block is underneath your overlap code block, and not your 'on start' code block. If you place it under 'on start', the player will start with 2 lives and nothing will happen when the enemy touches them.
+1. Uh oh! Right now, your enemy spawns on top of your player and instantly kills them. This doesn't work, as it's completely unfair. This can be fixed by making the enemy spawn in a different location. Navigate to the 'sprites' section of the code, then the 'physics' subsection. Select the code block that says 'set mysprite position to x 0 and y 0.' Click and drag this into your 'on start' block.
+2. Click the mysprite name and select the name of your enemy sprite from the dropdown. Then, change the x and y values by clicking and typing a new number. There will be a popup showing you where on the map your position will put the enemy.
+3. Hmm, this still lets the enemy instantly kill the player when they touch. We can reset the enemy's position when they deal damage to prevent this. Navigate back to the 'sprites' section, and pick another 'set mysprite position to x 0 and y 0.' However, this time, click and drag it into your overlap block, not the 'on start' one. Change the position values and sprite name here as well, so that the enemy can't one shot our player.
+![Alt text for the image](img/enemy_8.png)
 
----
+## Conclusion
 
-## Step 1: Open MakeCode Arcade
+After completing this section, you'll have the following:
 
-1. Open your web browser.
-2. Go to **MakeCode Arcade**.
-3. Click **New Project**.
-4. Name your project (for example: `Enemy Game`).
+* An enemy that follows your player around.
+* A player sprite with 3 lives.
+* An enemy that damages your player.
+* A game that ends when you've run out of lives.
 
-Once the editor opens, switch to **JavaScript mode**.
-
----
-
-## Step 2: Creating the Player Sprite
-
-The first step in the game is creating the **player sprite**.  
-In this tutorial, the player is represented by a **yellow duck**.
-
-The following JavaScript code creates the player sprite and assigns it the type `SpriteKind.Player`.
-
-```javascript
-let yellowDuck = sprites.create(img`
-    . . . . . . . . . . a 5 a . . .
-    . . . . . . . . . a 5 a . . . .
-    . . . . . . a a a a a a . . . .
-    . . . . . a a 5 5 5 5 5 a . . .
-    . . . . a a 5 d 1 f 5 d 4 c . .
-    . . . . a 5 5 1 f f d d 4 4 4 a
-    . . . . a 5 5 d f b 4 4 4 4 a .
-    . . . a d 5 5 5 5 4 4 4 4 a . .
-    . a a d d d 5 5 5 5 5 5 5 a . .
-    a d d d a a a 5 5 5 5 5 5 5 a .
-    c d d a 5 5 d c 5 5 5 5 5 5 a .
-    c a a d 5 d c d 5 5 5 5 5 5 a .
-    c a 5 5 b c d d 5 5 5 5 5 5 a .
-    a a c c c d d d 5 5 5 5 5 d a .
-    . . . . c c d d d 5 5 5 a a . .
-    . . . . . . c c c c c a a . . .
-`, SpriteKind.Player)
-```
-Step 3: Creating the Enemy Sprite
-After creating the player, we create the enemy sprite.
-The enemy will chase the player during gameplay.
-``` javascript
-let enemy = sprites.create(img`
-    . . . . . . . . . . . . . . . .
-    . . . . 2 2 2 2 2 2 2 . . . . .
-    . . . 2 2 2 2 2 2 2 2 2 . . . .
-    . . 2 2 2 f 2 2 2 f 2 2 2 . . .
-    . . 2 2 2 2 2 2 2 2 2 2 2 . . .
-    . . 2 1 2 2 2 2 2 2 2 1 2 . . .
-    . . 2 2 2 2 2 2 2 2 2 2 2 . . .
-    . . . 2 2 2 2 2 2 2 2 2 . . . .
-    . . . . 2 2 2 2 2 2 2 . . . . .
-    . . . . . 2 2 . . 2 2 . . . . .
-    . . . . 2 2 . . . . 2 2 . . . .
-    . . . 2 2 . . . . . . 2 2 . . .
-    . . 2 2 . . . . . . . . 2 2 . .
-`, SpriteKind.Enemy)
-```
-The type SpriteKind.Enemy tells the game that this sprite represents an enemy character.
-
-Step 4: Enabling Player Movement
-Next, we allow the player to move around the game map.
-``` javascript
-controller.moveSprite(yellowDuck, 100, 100)
-```
-This command allows the player to move in all directions using the arrow keys.
-
-Step 5: Making the Camera Follow the Player
-To keep the player centered on the screen while moving through the level, the camera follows the player sprite.
-``` javascript
-scene.cameraFollowSprite(yellowDuck)
-```
-This ensures the player stays centered on the screen.
-
-Step 6: Adding Game Information
-Add score and life counters.
-``` javascript
-info.setLife(3)
-info.setScore(0)
-```
-The player starts with three lives.
-
-Step 7: Starting the First Level
-Track the current level and load the first level.
-``` javascript
-let currentLevel = 1
-setLevel(currentLevel)
-```
-Step 8: Creating the Level System
-The setLevel() function loads different tilemaps and positions the sprites.
-``` javascript
-function setLevel(level: number) {
-    if (level == 1) {
-        tiles.setCurrentTilemap(tilemap`level1`)
-        tiles.placeOnTile(yellowDuck, tiles.getTileLocation(1, 2))
-        tiles.placeOnTile(enemy, tiles.getTileLocation(8, 2))
-    } else if (level == 2) {
-        tiles.setCurrentTilemap(tilemap`level2`)
-        tiles.placeOnTile(yellowDuck, tiles.getTileLocation(1, 1))
-        tiles.placeOnTile(enemy, tiles.getTileLocation(7, 5))
-    } else {
-        tiles.setCurrentTilemap(tilemap`level3`)
-        tiles.placeOnTile(yellowDuck, tiles.getTileLocation(2, 2))
-        tiles.placeOnTile(enemy, tiles.getTileLocation(10, 6))
-    }
-}
-```
-Each level loads a different map and places the enemy in a new location.
-
-Step 9: Programming the Enemy to Follow the Player
-The enemy moves toward the player every second.
-``` javascript
-game.onUpdateInterval(1000, function () {
-    if (enemy.x < yellowDuck.x) {
-        enemy.vx = 30
-    } else {
-        enemy.vx = -30
-    }
-
-    if (enemy.y < yellowDuck.y) {
-        enemy.vy = 30
-    } else {
-        enemy.vy = -30
-    }
-})
-```
-This creates a simple enemy chasing behavior.
-
-Step 10: Detecting Collisions Between Player and Enemy
-When the enemy touches the player, the player loses one life.
-``` javascript
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (player, badGuy) {
-    info.changeLifeBy(-1)
-    tiles.placeOnTile(yellowDuck, tiles.getTileLocation(1, 2))
-    pause(500)
-
-    if (info.life() <= 0) {
-        game.over(false)
-    }
-})
-```
-If the player loses all lives, the game ends.
-
-Step 11: Changing Levels
-Press the A button to move to the next level.
-
-``` javascript
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    currentLevel += 1
-
-    if (currentLevel > 3) {
-        game.over(true)
-    } else {
-        setLevel(currentLevel)
-        info.changeScoreBy(1)
-    }
-})
-```
-
-When all levels are completed, the player wins the game.
-
-Summary
-In this tutorial, you learned how to:
-
-create a player sprite
-
-create an enemy sprite
-
-enable player movement
-
-add camera tracking
-
-display score and lives
-
-build multiple levels
-
-program enemy movement
-
-detect sprite collisions
-
-change levels during gameplay
-
-Enemy sprites make games more exciting because they introduce challenge and interaction.
+Nice work! You can move on to further customizing your game in the next section, Customization.
+[comment]: # (Customization links to the customization page)

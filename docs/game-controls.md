@@ -28,13 +28,14 @@ To allow the player to move, use the `controller.moveSprite()` function.
 ```javascript
 controller.moveSprite(yellowDuck, 100, 100)
 ```
-This allows movement in all directions using the arrow keys.
+![Alt text for the image](img/game-controller-1.png)
+- This allows movement in all directions using the arrow keys.
 
-100 controls horizontal speed
+- 100 controls horizontal speed
 
-100 controls vertical speed
+- 100 controls vertical speed
 
-Step 2: Add Life System
+## Step 2: Add Life System
 
 The life system tracks how many chances the player has before the game ends.
 ```javascript
@@ -42,7 +43,7 @@ info.setLife(3)
 ```
 This gives the player 3 lives at the start of the game.
 
-Step 3: Add Score System
+## Step 3: Add Score System
 
 The score system tracks the player’s progress.
 ```javascript
@@ -52,7 +53,7 @@ You can increase the score when the player completes a level:
 ```javascript
 info.changeScoreBy(1)
 ```
-Step 4: Detect Collision Between Player and Enemy
+## Step 4: Detect Collision Between Player and Enemy
 
 Use an overlap event to detect when the player touches the enemy.
 ```javascript
@@ -64,7 +65,7 @@ When a collision happens:
 
 the player loses one life
 
-Step 5: Reset Player Position After Collision
+## Step 5: Reset Player Position After Collision
 
 After a collision, it is helpful to reset the player’s position.
 ```javascript
@@ -73,7 +74,7 @@ pause(500)
 ```
 This prevents immediate repeated collisions.
 
-Step 6: End Game When Life Reaches Zero
+## Step 6: End Game When Life Reaches Zero
 
 Add a condition to end the game when the player has no lives left.
 ```javascript
@@ -85,7 +86,7 @@ false means the player loses
 
 true would mean the player wins
 
-Step 7: Create Button Event for Level Change
+## Step 7: Create Button Event for Level Change
 
 Use a button event to allow the player to move to the next level.
 ```javascript
@@ -110,7 +111,7 @@ This:
 
 - ends the game if all levels are completed
 
-Step 8: Use Update Events (Optional)
+## Step 8: Use Update Events (Optional)
 
 You can use update events to run code repeatedly.
 ```javascript
@@ -120,47 +121,47 @@ game.onUpdateInterval(1000, function () {
 ```
 This is useful for:
 
-enemy movement
+- enemy movement
 
-timers
+- timers
 
-repeated actions
+- repeated actions
 
-Summary
+## Summary
 
 In this tutorial, you learned how to:
 
-enable player movement
+- enable player movement
 
-create a life system
+- create a life system
 
-create a score system
+- create a score system
 
-detect collisions
+- detect collisions
 
-reset player position
+- reset player position
 
-end the game
+- end the game
 
-use button events
+- use button events
 
-control game flow
+- control game flow
 
 Game controls and events are essential for making your game interactive and engaging.
 
-Tips
+## Tips
 
-Keep movement speed balanced
+- Keep movement speed balanced
 
-Always test collisions carefully
+- Always test collisions carefully
 
-Reset player position after damage
+- Reset player position after damage
 
-Use events to control gameplay flow
+- Use events to control gameplay flow
 
-Keep your code organized
+- Keep your code organized
 
-Common Mistakes
+## Common Mistakes
 
 forgetting to enable movement
 
