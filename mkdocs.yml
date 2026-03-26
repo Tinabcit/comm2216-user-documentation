@@ -6,7 +6,7 @@ theme:
   features:
     - content.code.copy
 nav:
-  - Home: intro.md
+  - Home: index.md
   - Installation: body.md
   - Player: player.md
   - Enemy: enemy.md
@@ -14,7 +14,6 @@ nav:
   - Tilemap: tilemaps-levels.md
   - Troubleshooting: troubleshooting.md
   - Glossary: glossary.md
-  - Optional Enemy: enemy-higher-level.md
 
 markdown_extensions:
   - admonition

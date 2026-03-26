@@ -14,7 +14,7 @@ controller.moveSprite(player, 100, 100)
 ## Blocks
 
 - A visual way of coding where you drag and connect blocks instead of typing code.
-![Alt text for the image](img/glossary-1.png)
+![Block code being used in MakeCode Arcade](img/glossary-1.png "Block code being used in MakeCode Arcade")
 
 ## Sprite
 
@@ -30,7 +30,7 @@ controller.moveSprite(player, 100, 100)
 let player = sprites.create(img`...`, SpriteKind.Player)
 ```
 
-![Alt text for the image](img/glossary-3.png)
+![The player creation function being used in the code editor](img/glossary-3.png "The player creation function being used in the code editor")
 
 ## Enemy Sprite
 
@@ -42,7 +42,7 @@ Example:
 let enemy = sprites.create(img`...`, SpriteKind.Enemy)
 ```
 
-![Alt text for the image](img/glossary-4.png)
+![The enemy creation function being used in the code editor](img/glossary-4.png "The enemy creation function being used in the code editor")
 
 ## SpriteKind
 
@@ -55,7 +55,7 @@ SpriteKind.Player
 SpriteKind.Enemy
 ```
 
-![Alt text for the image](img/glossary-5.png)
+![The SpriteKind variables in the code editor](img/glossary-5.png "The SpriteKind variables in the code editor")
 
 ## Tilemap
 
@@ -67,7 +67,7 @@ Example:
 tiles.setCurrentTilemap(tilemap`level1`)
 ```
 
-![Alt text for the image](img/glossary-6.png)
+![The setCurrentTilemap function being used in the code editor](img/glossary-6.png "The setCurrentTilemap function being used in the code editor")
 
 ## Location
 
@@ -79,7 +79,7 @@ Example:
 tiles.placeOnTile(player, tiles.getTileLocation(1, 2))
 ```
 
-![Alt text for the image](img/glossary-7.png)
+![The placeOnTile function being used in the code editor](img/glossary-7.png "The placeOnTile function being used in the code editor")
 
 ## Collision (Overlap)
 
@@ -93,7 +93,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function () {
 })
 ```
 
-![Alt text for the image](img/glossary-7-1.png)
+![The onOverlap function being used in the code editor](img/glossary-7-1.png "The onOverlap function being used in the code editor")
 
 ## Velocity
 
@@ -106,7 +106,7 @@ enemy.vx = 30
 enemy.vy = -30
 ```
 
-![Alt text for the image](img/glossary-8.png)
+![The velocity variables being used in the code editor](img/glossary-8.png "The velocity variables being used in the code editor")
 
 ## Event
 
@@ -118,7 +118,7 @@ Example:
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {})
 ```
 
-![Alt text for the image](img/glossary-9.png)
+![The onEvent checker being used in the code editor](img/glossary-9.png "The onEvent checker being used in the code editor")
 
 ## Function
 
@@ -130,7 +130,7 @@ Example:
 function setLevel(level: number) {}
 ```
 
-![Alt text for the image](img/glossary-10.png)
+![A custom function being used in the code editor](img/glossary-10.png "A custom function being used in the code editor")
 
 ## Level
 
@@ -147,7 +147,7 @@ scene.cameraFollowSprite(player)
 
 ```
 
-![Alt text for the image](img/glossary-11.png)
+![The cameraFollowSprite function being used in the code editor](img/glossary-11.png "The cameraFollowSprite function being used in the code editor")
 
 ## Score
 
@@ -160,7 +160,7 @@ info.changeScoreBy(1)
 
 ```
 
-![Alt text for the image](img/glossary-12.png)
+![The changeScoreBy function being used in the code editor](img/glossary-12.png "The changeScoreBy function being used in the code editor")
 
 ## Life
 
@@ -173,7 +173,7 @@ info.setLife(3)
 
 ```
 
-![Alt text for the image](img/glossary-13.png)
+![The setLife function being used in the code editor](img/glossary-13.png "The setLife function being used in the code editor")
 
 ## Update Interval
 
@@ -186,4 +186,4 @@ game.onUpdateInterval(1000, function () {})
 
 ```
 
-![Alt text for the image](img/glossary-14.png)
+![The onUpdateInterval function being used in the code editor](img/glossary-14.png "The onUpdateInterval function being used in the code editor")
